@@ -23,5 +23,5 @@ S = 80 #shannon number; effective size of the parametrization
 maxarea = 0.25 #maximum area of the mesh cells; may need to be decreased to allow slepian construction to work. 
 points_dict = {"vertices":vertices,"segments":np.array([[i,i+1] for i in range(len(vertices)-1)] + [[len(vertices)-1,0]])}
 quad_rules = pyslepians.get_tri_quadrature(points_dict, maxarea)
-w, A = pyslepians.compute_slepians_at_points(quad_rules, S, eastings, northings) # weights and slepian values at points
+w, A = pyslepians.compute_slepians_at_points(quad_rules, S, eastings, northings) # concentration values and slepian function evaluations at given points
 ```
